@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>                
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIPS</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: rgb(165, 19, 19);">
+    <div class="container">
+        <h2 class="display-2">Malaria Image Processing System</h2>
+        <h4 class="text-white bg-dark">Malaria Image Processing System (MIPS) adalah serangkaian sistem yang terdiri dari komponen piranti cerdas, sistem benam, dan Internet of Things untuk mengklasifikasikan spesies Plasmodium penyebab Malaria dengan tujuan mendukung terwujudnya Indonesia bebas Malaria 2030. Program otomatisasi deteksi Plasmodium dari citra blood smear menggunakan kecerdasan buatan (deep learning) telah dikembangkan untuk mendukung diagnosis malaria. Sistem awal hanya difokuskan pada hasil positif dan negatif Plasmodium dari citra blood smear.</p>
+    </div>
+</div>
+
+<style> 
+input[type=submit] {
+  background-color: rgb(165, 19, 19);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.container{
+color : rgb(246, 247, 239);
+}
+</style>
+</body>
+</html>
+
+
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+   	 
+    {% if form %}
+   	 	<div class="col-md-4 col-lg-offset-4">
+   		     	{{ wtf.quick_form(form) }}
+   		</div>
+   	{% endif %}
+    
+{% endblock %}
